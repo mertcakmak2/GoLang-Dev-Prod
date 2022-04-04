@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:     
+  go-app-prod:
+    restart: "no"
+    image: mertcakmak2/go-app
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile-prod
+    container_name: go-app-prod
+    ports:
+      - 9090:9090
+    env_file:
+      - ./prod/.env

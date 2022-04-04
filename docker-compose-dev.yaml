@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:     
+  go-app-dev:
+    restart: "no"
+    image: mertcakmak2/go-app
+    # build: .
+    container_name: go-app-dev
+    ports:
+      - 8080:8080
+    env_file:
+      - .env

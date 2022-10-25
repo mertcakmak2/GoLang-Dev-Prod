@@ -19,7 +19,7 @@ func main() {
 }
 
 func hello(c *gin.Context) {
-	c.JSON(http.StatusOK, "Hello from: "+getEnv("MODE"))
+	c.JSON(http.StatusOK, "Hello from v2: "+getEnv("MODE"))
 }
 
 func getEnv(key string) string {
